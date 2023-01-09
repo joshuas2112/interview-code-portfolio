@@ -24,7 +24,7 @@ class WatchingFolder():
 
     def start_checking(self):
         """Begin repeatedly calling check_folder(), with an interval defined by
-        self.frequency
+        self.frequency (in seconds)
 
         Update self.changes to reflect whether changes are present
         """
@@ -65,7 +65,7 @@ class MoveFrom(WatchingFolder):
             while True:
                 try:    # try to rename with (`same_name`) at end
                     os.rename(file_path, os.path.join(destination, file_title +
-                                                      " ({})".format(same_name)
+                                                      f" ({same_name})"
                                                       + extension))
                     break
                 # there is already the file with the same number
@@ -75,7 +75,8 @@ class MoveFrom(WatchingFolder):
     def auto_move(self):
         self.start_checking()
         while True:
-            if self.changes:
+            if self.changes:  # later thought - not needed, bcs won't continue
+                # if no changes - repeats in start_checking()
                 for file in self.check_folder():
                     self.move_file(file)
                 self.start_checking()

@@ -12,7 +12,8 @@ class WatchingFolder():
         self.base_state = []
 
     def check_folder(self):
-        """Check the folder to see if new files (or directories) are present
+        """
+        Check the folder to see if new files (or directories) are present
         generate the file paths as strings
         """
         current_state = os.listdir(self.path)
@@ -46,7 +47,8 @@ class MoveFrom(WatchingFolder):
         self.destination = destination
 
     def move_file(self, file_path: str, destination: str = None) -> None:
-        """Move a provided file from one dir to another
+        """
+        Move a provided file from one dir to another
 
         :param file_path: The path of the file to move
         :type file_path: str

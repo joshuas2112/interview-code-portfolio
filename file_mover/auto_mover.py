@@ -62,7 +62,7 @@ class MoveFrom(WatchingFolder):
         file_title, extension = os.path.splitext(file_name)
         try:
             os.rename(file_path, os.path.join(destination, file_name))
-        except FileExistsError:
+        except FileExistsError: # only works on windows - linux replaces file
             same_name = 1
             while True:
                 try:    # try to rename with (`same_name`) at end

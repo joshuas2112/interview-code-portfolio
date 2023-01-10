@@ -73,7 +73,7 @@ def pickle_scores(pickle_file, scores_dict):
 
 
 def get_name(names_dict):
-  input_message = "Enter name\n> "
+  input_message = "Enter name ~ scores() to show scores\n> "
   while True:
     name = input(input_message)
 

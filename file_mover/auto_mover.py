@@ -9,7 +9,7 @@ class WatchingFolder():
         self.frequency = frequency
         self.changes = False
 
-        self.base_state = []
+        self.base_state = [".placeholder"]
 
     def check_folder(self):
         """
@@ -77,8 +77,7 @@ class MoveFrom(WatchingFolder):
     def auto_move(self):
         self.start_checking()
         while True:
-            if self.changes:  # later thought - not needed, bcs won't continue
-                              # if no changes - repeats in start_checking()
+            if self.changes: 
                 for file in self.check_folder():
                     self.move_file(file)
                 self.start_checking()

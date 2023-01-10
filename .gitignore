@@ -1,0 +1,6 @@
+file_mover/filing_venv
+file_mover/.vscode
+file_mover/__pycache__
+file_searcher/searcher_venv
+speed_test/speed_test_venv
+speed_test/__pycache__

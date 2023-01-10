@@ -12,7 +12,14 @@ When programming with this, I was experimenting with OOP. Admittedly, I've not u
 
 ### NOTES:
 There is a .placeholder file in file_mover/from_folder and file_mover/destination. If these cause errors they can be deleted. 
+Should be run on WINDOWS
 
 ## file_searcher
 I was unsure whether to include this, as it's only a basic framework and I haven't tried fleshing it out. However, I've included it as additional evidence.
-The program searches a file for 
+The program searches a file for the search term, then prints the next `output_length` characters on that line after the search term. 
+Empty search terms print the whole file
+The search file defaults to the one already there
+Show failures will list the line numbers where the search term is not present
+
+## speed_test
+A simple typing speed test, which has the user copy out a text of variable length. There are two word lists included in the program, supposedly the top 100 and 200 words (I took them from the internet so they may not be accurate). The program times the amount of time taken to copy the text, and records the number of errors. It then outputs WPM. Correct WPM factors in errors. 

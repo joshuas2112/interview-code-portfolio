@@ -1,5 +1,6 @@
 # interview-code-portfolio
 Store code for interview
+MAKE SURE TO CD INTO EACH DIRECTORY BEFORE RUNNING (eg 'cd file_mover' before running it)
 Much of this code is quite poorly documented, but I'm working on trying to make it clearer with more comments. 
 I coded all of these on windows, but I've tested them on Fedora Linux 37, with python 3.11.1. They mostly work on linux, but some features don't, so I would RECOMMEND USING WINDOWS. 
 If I remember correctly, all of this is my own work, done without tutorials (I had previously learnt python online), though obviously I used the python docs, etc.

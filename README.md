@@ -24,3 +24,10 @@ Show failures will list the line numbers where the search term is not present
 ## speed_test
 A simple typing speed test, which has the user copy out a text of variable length. There are two word lists included in the program, supposedly the top 100 and 200 words (I took them from the internet so they may not be accurate). The program times the amount of time taken to copy the text, and records the number of errors. It then outputs WPM. Correct WPM factors in errors. 
 The two words can be changed on line 121 (... word_list_loader("./200_words.txt")). I'm aware I could easily have the user input this, but having it hardcoded saves having to process the input to ensure it's valid, etc. 
+
+## numbers_quiz
+This was originally based on a set of "OCR coding challenges" we were given in school, though I expanded slightly on it (if you know the challenges I'm referring to, it was number 39).
+For this reason, the program is only slightly funcions-based, as I had originally stored it in a single main.py file with several other challenges, with all the code as a single function. Since then, I have spent some small amount of time splitting it into some functions, but a lot of it would need completely rewriting to convert it entirely to functions. 
+This is the most recent of the programs I have put on this repo (I coded it in late 2022). It was originally programmed on replit (at school), so there may be bugs when run on windows but I've at least tested it on fedora linux and I think it runs okay. 
+The quiz asks a series of maths questions, then stores them in a dictionary according to the inputted name. This dictionary is pickled so the scores are saved after the program is exited.
+Entering "scores()" when asked for your name will print all of the scores.

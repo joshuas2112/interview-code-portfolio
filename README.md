@@ -23,3 +23,4 @@ Show failures will list the line numbers where the search term is not present
 
 ## speed_test
 A simple typing speed test, which has the user copy out a text of variable length. There are two word lists included in the program, supposedly the top 100 and 200 words (I took them from the internet so they may not be accurate). The program times the amount of time taken to copy the text, and records the number of errors. It then outputs WPM. Correct WPM factors in errors. 
+The two words can be changed on line 121 (... word_list_loader("./200_words.txt")). I'm aware I could easily have the user input this, but having it hardcoded saves having to process the input to ensure it's valid, etc. 

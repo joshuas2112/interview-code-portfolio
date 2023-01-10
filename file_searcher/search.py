@@ -1,12 +1,3 @@
-def positive(num: int) -> int:
-    """
-    Turns a negative number into the "matching" positive one. 
-    """
-    if num < 0:
-        num -= num * 2
-    return num
-
-
 def posintinator(input_str: str = 0) -> int:
     """
     Turn a value into an int
@@ -28,23 +19,23 @@ def posintinator(input_str: str = 0) -> int:
         except Exception:     # return 0 if all else fails
             print("String Not Valid - Returning 0")
             return_int = 0
-    return abs(return_int)
+    return abs(return_int) # ensure not negative
 
 
 def main():
     # get search criteria
-    file = input("Please enter a file path to search: ")
-    search_term = input("Please enter a search term: ").casefold()
+    file = input("Please enter a file path to search: ") 
+    search_term = input("Please enter a search term: ").casefold() # what looking for
     output_length = posintinator(input(
-        "Please enter a maximum length for output following result (default = 0): "))
-    show_fail = input("Would you like to see failures? [Y/n] ").casefold()
+        "Please enter a maximum length for output after result (default = 0): "))
+    show_fail = input("Would you like to see failures? [Y/n] ").casefold() # will show lines that don't contain
 
     try:    # check if file path is valid
         test_path = open(file, 'r')
         test_path.close()
         correct_path = file
     except:     # default to search_file.txt
-        correct_path = "./search_file.txt"
+        correct_path = "./search_file.txt" # default to a known file
         print(f"Invalid Path, defaulting to '{correct_path}'\n")
 
     with open(correct_path, 'r') as searching_file:
@@ -63,9 +54,9 @@ def main():
                                   .rstrip("\n"))
                 elif show_fail != "n":
                     print(f"not in line {line_num+1}")
-        else:
+        else: # empty search term
             for line in searching_file:
-                print(line, end="")
+                print(line, end="") # print full file
 
 
 if __name__ == '__main__':

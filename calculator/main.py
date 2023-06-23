@@ -1,8 +1,8 @@
-import math
-import operator
-import operations
-import sqlite3
-import readline
+import math  # will be used later to expand functionality
+import operations  # same as math, for custom functions
+import operator  # used to provide functionality in the `calculate()` function
+import sqlite3  # used to access `operations.db`
+import readline  # allows use of arrow keys when typing in expression
 
 
 def proc_calc_input(input_list: list, op_definitions: dict):
@@ -64,7 +64,7 @@ def convert_to_lists(proc_input: list, operations_db_path="operations.db", opera
                 del formatted_list[pos+1]
                 del formatted_list[pos-1]
                 # don't increment pos because all elements have moved one down
-            else: # is number
+            else:  # is number
                 pos += 1
     return formatted_list
 

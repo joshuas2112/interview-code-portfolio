@@ -1,0 +1,8 @@
+Welcome to the calculator
+
+Please enter any expressions with spaces between each element, like this:
+1 + 2 - 3 + 4
+
+Currently "IDMASS" works, but there is no support for brackets in expressions
+
+Support for custom functions will be added in the future

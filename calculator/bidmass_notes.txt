@@ -1,0 +1,4 @@
+0 - brackets, func
+1 - indices
+2 - div, mul, mod
+3 - add, sub
